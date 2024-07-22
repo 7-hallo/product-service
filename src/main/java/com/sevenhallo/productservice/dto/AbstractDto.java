@@ -9,12 +9,12 @@ import java.time.LocalDateTime;
 @Setter
 public class AbstractDto<E> {
 
-    private LocalDateTime createAt;
+  private LocalDateTime createAt;
 
-    private LocalDateTime lastModifiedAt;
+  private LocalDateTime lastModifiedAt;
 
-    private String createdBy;
+  private String createdBy;
 
-    private String lastModifiedBy;
+  private String lastModifiedBy;
 
 }

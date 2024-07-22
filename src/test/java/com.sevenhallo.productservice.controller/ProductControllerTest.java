@@ -66,7 +66,7 @@ public class ProductControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content()
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.id", Is.is(1)));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id", Is.is("1")));
 
         Mockito.verify(productService, Mockito.times(1)).findById("1");
         Mockito.verifyNoMoreInteractions(productService);
