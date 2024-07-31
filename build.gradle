@@ -21,6 +21,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
@@ -43,6 +44,7 @@ dependencies {
     implementation 'commons-validator:commons-validator:1.9.0'
 
     implementation 'org.springframework.data:spring-data-rest-webmvc:4.3.1'
+    implementation 'com.sevenhallo:common:1.0.0'
 }
 
 tasks.named('test') {
