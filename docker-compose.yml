@@ -1,0 +1,21 @@
+services:
+  product-service:
+    image: sevenhallo-product-service:latest
+    container_name: product-service
+    command: start-dev
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sevenhallo?currentSchema=demo
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    ports:
+      - "8012:8012"
+    networks:
+      - sevenhallo
+
+volumes:
+  product-service:
+
+networks:
+  sevenhallo:
+    driver: bridge
+    external: true
