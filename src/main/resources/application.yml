@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: product-service
+
   datasource:
     url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/sevenhallo?currentSchema=demo}
     username: ${SPRING_DATASOURCE_USERNAME:postgres}
@@ -16,3 +17,14 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
+#  cloud:
+#    client:
+#      hostname: localhost
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka,http://localhost2:8762/eureka
+#  instance:
+#    appname: product-service
