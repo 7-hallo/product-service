@@ -18,6 +18,9 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
+  config:
+    import: optional:configserver:http://localhost:8888/
+
 #  cloud:
 #    client:
 #      hostname: localhost
@@ -28,3 +31,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka,http://localhost2:8762/eureka
 #  instance:
 #    appname: product-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include=*:
